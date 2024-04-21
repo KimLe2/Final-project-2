@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+/* Import ET Book styles
+   adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
+
+   @font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+    src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+    src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book-roman-old-style";
+    src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+    src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Tufte CSS styles */
+
+html {
+    font-size: 15px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(#9AB6D0, #5195D3, #074A87);
+    padding: 15px;
+    width: 100%;
+    min-height: 110vh;
+}
+
+.add-tasks{
+    background: #fff;
+    width: 100%;
+    margin: 120px auto 25px;
+    padding: 35px 35px 65px;
+    border-radius: 5px;
+    max-width: 800px;
+}
+
+.add-tasks h2{
+    color: #002765;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.add-tasks h2 img{
+    margin-left: 20px;
+    width: 35px;
+}
+
+.line {
+    background: #edeef0;
+    display: flex;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+input{
+    border: none;
+    padding: 12px;
+    background: transparent;
+    outline: none;
+    flex: 1;
+}
+
+button{
+    font-size: 18px;
+    padding: 15px 55px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #074A87;
+    color: #fff;
+    cursor: pointer;
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 15px 10px 14px 55px;
+    user-select: none;
+}
+
+ul li::before {
+    position: absolute;
+    background-image: url(uncheck.svg);
+    content: '';
+    height: 25px;
+    width: 25px;
+    top: 14px;
+    left: 5px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color: #2d2c2c;
+}
+
+ul li.checked::before {
+    background-image: url(check.svg);
+}
+
+ul li span{
+    font-size: 24px;
+    color: #2d2c2c;
+    position: absolute;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    top: 6px;
+}
+
+ul li span:hover{
+    background: #ffffff;
+}
+
+@media (max-width: 760px) {
+    body {
+        width: 84%;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    hr,
+    section > p,
+    section > footer,
+    section > table {
+        width: 100%;
+    }
+
+    pre > code {
+        width: 97%;
+    }
+
+    section > dl,
+    section > ol,
+    section > ul {
+        width: 90%;
+    }
+
+    figure {
+        max-width: 90%;
+    }
+
+    figcaption,
+    figure.fullwidth figcaption {
+        margin-right: 0%;
+        max-width: none;
+    }
+
+    blockquote {
+        margin-left: 1.5em;
+        margin-right: 0em;
+    }
+
+    blockquote p,
+    blockquote footer {
+        width: 100%;
+    }
+
+    label.margin-toggle:not(.sidenote-number) {
+        display: inline;
+    }
+
+    .sidenote,
+    .marginnote {
+        display: none;
+    }
+
+    .margin-toggle:checked + .sidenote,
+    .margin-toggle:checked + .marginnote {
+        display: block;
+        float: left;
+        left: 1rem;
+        clear: both;
+        width: 95%;
+        margin: 1rem 2.5%;
+        vertical-align: baseline;
+        position: relative;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    div.table-wrapper,
+    table {
+        width: 85%;
+    }
+
+    img {
+        width: 100%;
+    }
+}

@@ -12,10 +12,10 @@
 }
 
 .container {
-    background: rgb(83, 148, 202);
+    background: linear-gradient(#9AB6D0, #5195D3, #074A87);
     padding: 15px;
     width: 100%;
-    min-height: 100vh;
+    min-height: 110vh;
 }
 
 .add-tasks{
@@ -23,12 +23,13 @@
     width: 100%;
     margin: 120px auto 25px;
     padding: 35px 35px 65px;
-    border-radius: 8px;
-    max-width: 550px;
+    border-radius: 5px;
+    max-width: 800px;
 }
 
 .add-tasks h2{
     color: #002765;
+    font-size: 32px;
     display: flex;
     align-items: center;
     margin-bottom: 25px;
@@ -45,7 +46,7 @@
     padding-left: 30px;
     margin-bottom: 30px;
     align-items: center;
-    border-radius: 35px;
+    border-radius: 5px;
     justify-content: space-between;
 }
 
@@ -61,7 +62,7 @@ button{
     font-size: 18px;
     padding: 15px 55px;
     border: none;
-    border-radius: 45px;
+    border-radius: 5px;
     outline: none;
     background: #074A87;
     color: #fff;
@@ -81,10 +82,10 @@ ul li::before {
     position: absolute;
     background-image: url(uncheck.svg);
     content: '';
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     top: 14px;
-    left: 10px;
+    left: 5px;
     border-radius: 50%;
     background-size: cover;
     background-position: center;
@@ -110,10 +111,8 @@ ul li span{
     text-align: center;
     border-radius: 50%;
     top: 6px;
-
 }
 
 ul li span:hover{
     background: #ffffff;
 }
-

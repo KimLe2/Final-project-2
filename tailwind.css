@@ -1,0 +1,27 @@
+m-0 p-0 font-[sans-serif] box-border
+
+bg-[linear-gradient(#9AB6D0,_#5195D3,_#074A87)] p-[15px] w-full min-h-[110vh]
+
+bg-[#fff] w-full mt-[120px] mx-[auto] mb-[25px] pt-[35px] px-[35px] pb-[65px] rounded-[5px] max-w-[800px]
+
+text-[#002765] text-[32px] flex items-center mb-[25px]
+
+ml-[20px] w-[35px]
+
+bg-[#edeef0] flex pl-[30px] mb-[30px] items-center rounded-[5px] justify-between
+
+border-[none] p-[12px] bg-transparent outline-[none] flex-[1]
+
+text-[18px] px-[55px] py-[15px] border-[none] rounded-[5px] outline-[none] bg-[#074A87] text-[#fff] cursor-pointer
+
+relative [list-style:none] text-[18px] cursor-pointer pt-[15px] pr-[10px] pb-[14px] pl-[55px] select-none
+
+before:absolute before:bg-[url(uncheck.svg)] before:content-[''] before:h-[25px] before:w-[25px] before:top-[14px] before:left-[5px] before:rounded-[50%] before:bg-cover before:bg-center
+
+line-through text-[#2d2c2c]
+
+before:bg-[url(check.svg)]
+
+text-[24px] text-[#2d2c2c] absolute right-[0] w-[45px] h-[45px] leading-[45px] text-center rounded-[50%] top-[6px]
+
+hover:bg-[#ffffff]
